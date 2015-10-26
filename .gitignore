@@ -1,0 +1,13 @@
+# OS Cache
+.DS_Store
+Thumbs.db
+
+# env
+.env
+
+# npm
+npm-debug.log
+node_modules
+
+# built sources
+/dist
