@@ -12,7 +12,7 @@ module.exports = {
     client: './app/client'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public'),
     filename: 'client.js',
     publicPath: '/'
   },

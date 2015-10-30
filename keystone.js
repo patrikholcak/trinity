@@ -26,12 +26,14 @@ keystone.set('nav', {
   'users': 'users'
 })
 
-keystone.pre('routes', devMiddleware(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}))
+if (process.env.NODE_ENV == 'development') {
+  keystone.pre('routes', devMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }))
 
-keystone.pre('routes', hotMiddleware(compiler))
+  keystone.pre('routes', hotMiddleware(compiler))
+};
 
 keystone.set('routes', function (app) {
   app.all('*', function (req, res) {

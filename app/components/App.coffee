@@ -1,5 +1,5 @@
 React = require 'react'
-{div} = React.DOM
+{div, span} = React.DOM
 DocumentMeta = React.createFactory require 'react-document-meta'
 
 meta =
@@ -9,7 +9,8 @@ module.exports = React.createClass
   displayName: 'App'
 
   render: ->
-    div
-      className: 'text'
+    div null,
       DocumentMeta(meta)
-      'Hello world!'
+      span
+        className: 'text'
+        'Hello world!'
